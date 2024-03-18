@@ -1,0 +1,84 @@
+---
+import Layout from '../../layouts/PageLayout.astro';
+
+import Hero3 from '../../components/widgets/Hero3.astro';
+import Features from '../../components/widgets/Features.astro';
+import Content from '../../components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Sheetak — PCR Thermal Cycles',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero3 Widget ******************* -->
+
+  <Hero3 image={{ src: '~/assets/images/EON_Harvester_header-2.jpg', alt: 'EON Harverster' }}>
+    <Fragment slot="title"> PCR Thermal Cyclers </Fragment>
+  </Hero3>
+
+  <!-- Content Widget **************** -->
+
+  <Content id="content" isReversed>
+    <Fragment slot="content">
+      <p>
+        PCR process involves creation of ~1B copies of DNA strands using 30-40 repeated temperature cycles. The cycle
+        involves three main steps:
+      </p>
+
+      <ol type="1">
+        <li>Denaturing: Heat (~960 C) double-stranded template DNA to separate into 2 single strands</li>
+        <li>
+          Annealing: Cool reaction (5-650 C) to ensure short DNA fragment (primers) binds to complementary sequences on
+          single-stranded DNA
+        </li>
+        <li>
+          Extension: Raise reaction temperatures (~720 C) to allow added DNA primer to extend and form complete DNA
+          strand
+        </li>
+      </ol>
+      <p>
+        PCRs require tech which can provide precise temperature control at fast ramp rates and can handle millions of
+        such thermal cycles before failing
+      </p>
+      <p>Sheetak’s products with their patented technology are a one-stop solution for this requirement</p>
+    </Fragment>
+  </Content>
+
+  <Features
+    id="benefits"
+    title="Benefits"
+    columns={2}
+    items={[
+      {
+        title: 'Unmatchable reliability, upto 5x longer chip life',
+        description:
+          'With Sheetak’s revolutionary Fault Tolerant Network and compliant layer design, chip life increases 5x upto 20 years',
+        icon: 'tabler:hourglass',
+      },
+      {
+        title: 'Ability to withstand high operating temperature up to 200°C',
+        description:
+          'Unlike usage of solder at junctions, Sheetak’s products use silver sintering to enable high temperature operations',
+        icon: 'tabler:shield',
+      },
+      {
+        title: 'High quality scale manufacturing',
+        description:
+          'Our automated scale manufacturing line with thorough quality control ensures consistent high-quality production',
+        icon: 'tabler:building-factory-2',
+      },
+      {
+        title: 'Tailored as per needs',
+        description:
+          'Sheetak offers customization across form factor, solder material & compliance specs to meet exact customer needs',
+        icon: 'tabler:needle',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
+</Layout>

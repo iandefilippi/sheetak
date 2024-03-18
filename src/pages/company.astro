@@ -1,11 +1,13 @@
 ---
 import Hero3 from '../components/widgets/Hero3.astro';
 import HeroText from '../components/widgets/HeroText.astro';
+import Features from '../components/widgets/Features.astro';
 import Steps from '../components/widgets/Steps.astro';
+import Steps2 from '../components/widgets/Steps2.astro';
 import Layout from '../layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'Sheetak - Company',
 };
 ---
 
@@ -25,40 +27,67 @@ const metadata = {
 
   <!-- Content Widget ************** -->
 
-  <HeroText title="About Us" columns={3} isBeforeContent={true}>
+  <HeroText title="Our Vision">
     <Fragment slot="content">
       <p>
-        We push the boundaries of cooling technology, so you can push the boundaries of our modern world. Located in the
-        growing tech hub of Austin, Texas, Sheetak develops sustainable, ecofriendly solid-state cooling, heating and
-        energy harvesting technologies with breakthrough efficiencies.
+        At Sheetak, we believe in creating cutting-edge cooling and heating technology that is cost-efficient,
+        environmentally friendly, and of course, highly effective. We leverage over a century of expertise and an
+        extensive portfolio to develop pioneering cooling, heating and energy harvesting solutions.
       </p>
-      <p>
-        We have over 100+ years of knowledge and application of solid-state cooling, thermoelectric devices and
-        structures, and thermal management.
-      </p>
-      <p>Our formidable IP portfolio includes over 25 granted patents in Thermoelectric and related technologies.</p>
-      <p>
-        In addition, the company’s expertise extends to optimal material compositions, fabrication methods, quantum
-        thermoelectric device designs, circuit designs, architecture, and volume manufacturing.
-      </p>
-      <p>
-        Our state-of-the-art facilities in Austin, Texas can fabricate advanced thermoelectric modules – from
-        conventional bulk-technology devices to [soon] thin-film coolers and energy harvesters. We can also do assembly
-        of chips and engines, and TEC integration in systems of all types.
-      </p>
+      <br />
+      <p>We strive for this level of impact in every product we develop.</p>
     </Fragment>
   </HeroText>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps2
+    title="Our journey so far"
+    isReversed={false}
+    items={[
+      {
+        title: '2007',
+        description: 'Incorporated Sheetak Inc.',
+        icon: 'tabler:square-number-1',
+      },
+      {
+        title: '2014',
+        description: 'Received patent for thin-film design',
+        icon: 'tabler:square-number-2',
+      },
+      {
+        title: '2020',
+        description: 'Received patent for C3 design for multi-stage',
+        icon: 'tabler:square-number-3',
+      },
+      {
+        title: '2023',
+        description: 'Launched CENTUM®️',
+        icon: 'tabler:square-number-4',
+      },
+      {
+        title: '2024',
+        description: 'Launched QOOLCHIP™️',
+        icon: 'tabler:square-number-5',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Steps2>
 
   <!-- Steps2 Widget ****************** -->
 
   <Steps
-    title="Leadership Team"
+    title="Our Leadership"
     isReversed={false}
     items={[
       {
         title: 'Uttam Ghoshal',
         subtitle: 'Founder, President & CTO',
-        description: 'Uttam Ghoshal is an entrepreneur pioneering the commercialization of electronic refrigeration. He was a Master Inventor at IBM Research, the Founder of Nanocoolers Inc., VP at Cypress Semiconductor/Sunpower, and an Adjunct Professor at UT Austin. He has managed $30M+ US DOE & DOD funded programs, holds 150+ patents, and received his Ph.D. (EE) from UC Berkeley.',
+        description:
+          'Uttam Ghoshal is an entrepreneur pioneering the commercialization of electronic refrigeration. He was a Master Inventor at IBM Research, the Founder of Nanocoolers Inc., VP at Cypress Semiconductor/Sunpower, and an Adjunct Professor at UT Austin. He has managed $30M+ US DOE & DOD funded programs, holds 150+ patents, and received his Ph.D. (EE) from UC Berkeley.',
       },
       {
         title: 'Tejas Vakil',
@@ -87,6 +116,29 @@ const metadata = {
     ]}
   />
 
-
-  
+  <Features
+    title="Our manufacturing center"
+    items={[
+      {
+        title: 'High-volume line',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Advanced machinery',
+        icon: 'tabler:brand-apple-arcade',
+      },
+      {
+        title: 'Skilled manpower',
+        icon: 'tabler:jacket',
+      },
+      {
+        title: 'Made-in-USA',
+        
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
 </Layout>

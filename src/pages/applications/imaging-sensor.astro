@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/PageLayout.astro';
+
+import Hero3 from '../../components/widgets/Hero3.astro';
+import Features from '../../components/widgets/Features.astro';
+import Content from '../../components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Sheetak — Imaging Sensor',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero3 Widget ******************* -->
+
+  <Hero3 image={{ src: '~/assets/images/EON_Harvester_header-2.jpg', alt: 'EON Harverster' }}>
+    <Fragment slot="title"> Imaging Sensor </Fragment>
+  </Hero3>
+
+  <!-- Content Widget **************** -->
+
+  <Content id="content" isReversed>
+    <Fragment slot="content">
+      <p>
+        Imaging sensors such as CMOS sensors and IR sensors are used particularly in machine vision systems and security
+        cameras among a multitude of other applications.
+      </p>
+      <br />
+      <p>These sensors require active cooling to reduce thermal noise to ensure maximum possible image quality.</p>
+      <br />
+      <p>Thermoelectric chips which can dissipate high heat load at smaller form factor are an ideal fit.</p><br />
+      <p>
+        Manufacturers need to look no further than Sheetak’s proprietary Centum chips to ensure active cooling with
+        small form factors
+      </p>
+    </Fragment></Content
+  >
+
+  <Features
+    id="benefits"
+    title="Benefits"
+    columns={2}
+    items={[
+      {
+        title: 'Smaller form factor',
+        description:
+          'Sheetak’s patented densely packed chips can offer same cooling power at xx times smaller form factor vs industry average*',
+        icon: 'tabler:chart-arrows-vertical',
+      },
+      {
+        title: 'Unmatchable reliability, upto 5x longer chip life',
+        description:
+          'With Sheetak’s revolutionary Fault Tolerant Network and compliant layer design, chip life increases 5x upto 20 years',
+        icon: 'tabler:hourglass',
+      },
+      {
+        title: 'High quality scale manufacturing',
+        description:
+          'Our automated scale manufacturing line with thorough quality control ensures consistent high-quality production',
+        icon: 'tabler:building-factory-2',
+      },
+      {
+        title: 'Tailored as per needs',
+        description:
+          'Sheetak offers customization across form factor, solder material & compliance specs to meet exact customer needs',
+        icon: 'tabler:needle',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
+</Layout>

@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/PageLayout.astro';
+
+import Hero3 from '../../components/widgets/Hero3.astro';
+import Features from '../../components/widgets/Features.astro';
+import Content from '../../components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Sheetak — LiDAR',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero3 Widget ******************* -->
+
+  <Hero3 image={{ src: '~/assets/images/EON_Harvester_header-2.jpg', alt: 'EON Harverster' }}>
+    <Fragment slot="title"> LiDAR </Fragment>
+  </Hero3>
+
+  <!-- Content Widget **************** -->
+
+  <Content id="content" isReversed>
+    <Fragment slot="content">
+      <p>
+        LiDAR sensors in autonomous vehicles require thermal management solutions to deliver high-quality images as
+        temperature fluctuations can distort laser wavelength.
+      </p>
+      <br />
+      <p>
+        These sensors are usually placed in constrained space so traditional cooling components cannot be used. High
+        heat load from engine makes thermal control of these sensors even more difficult.
+      </p>
+      <br />
+      <p>
+        Sheetak’s patented thermoelectric technology with high heat load dissipation capacity and small form factors are
+        the perfect solution for thermal management of LiDAR sensors
+      </p>
+    </Fragment>
+  </Content>
+ß
+  <Features
+    id="benefits"
+    title="Benefits"
+    columns={2}
+    items={[
+      {
+        title: 'Unmatchable reliability, upto 5x longer chip life',
+        description:
+          'With Sheetak’s revolutionary Fault Tolerant Network and compliant layer design, chip life increases 5x upto 20 years',
+        icon: 'tabler:hourglass',
+      },
+      {
+        title: 'Smaller form factor',
+        description:
+          'Sheetak’s patented densely packed chips can offer same cooling power at xx times smaller form factor vs industry average*',
+        icon: 'tabler:chart-arrows-vertical',
+      },
+
+      {
+        title: 'High temperature differential',
+        description:
+          'With Sheetak’s patented design of replacing intermediate ceramic layer with metallic links between TE legs, chips can achieve 10% higher temperature differential',
+        icon: 'tabler:hourglass',
+      },
+      {
+        title: 'High quality scale manufacturing',
+        description:
+          'Our automated scale manufacturing line with thorough quality control ensures consistent high-quality production',
+        icon: 'tabler:building-factory-2',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
+</Layout>

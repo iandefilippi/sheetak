@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/PageLayout.astro';
+
+import Hero3 from '../../components/widgets/Hero3.astro';
+import Features from '../../components/widgets/Features.astro';
+import Content from '../../components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Sheetak — Vaccine Cooler',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero3 Widget ******************* -->
+
+  <Hero3 image={{ src: '~/assets/images/EON_Harvester_header-2.jpg', alt: 'EON Harverster' }}>
+    <Fragment slot="title"> Vaccine Cooler </Fragment>
+  </Hero3>
+
+  <!-- Content Widget **************** -->
+
+  <Content id="content" isReversed>
+    <Fragment slot="content">
+      <p>
+        Vaccine coolers are used in transporting vaccine/medicines to remote locations. Many vaccines must be maintained
+        in a temperature range of 2-8°C to remain potent.
+      </p>
+      <br />
+      <p>
+        The cooling system for vaccine coolers should be able to achieve temperature as low as 0°C and have insulative
+        properties to protect against high fluctuation in ambient temperature. The cooling system should also have small
+        form factor to allow more space for storage.
+      </p>
+      <br />
+      <p>Sheetak’s products with their patented technology are a one-stop solution for this requirement.</p>
+    </Fragment>
+  </Content>
+
+  <Features
+    id="benefits"
+    title="Benefits"
+    columns={2}
+    items={[
+      {
+        title: 'High temperature differential',
+        description:
+          'With Sheetak’s patented design of replacing intermediate ceramic layer with metallic links between TE legs, chips can achieve 10% higher temperature differential',
+        icon: 'tabler:hourglass',
+      },
+      {
+        title: 'Smaller form factor',
+        description:
+          'Sheetak’s patented densely packed chips can offer same cooling power at xx times smaller form factor vs industry average*',
+        icon: 'tabler:chart-arrows-vertical',
+      },
+      {
+        title: 'High quality scale manufacturing',
+        description:
+          'Our automated scale manufacturing line with thorough quality control ensures consistent high-quality production',
+        icon: 'tabler:building-factory-2',
+      },
+      {
+        title: 'Tailored as per needs',
+        description:
+          'Sheetak offers customization across form factor, solder material & compliance specs to meet exact customer needs',
+        icon: 'tabler:needle',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
+</Layout>

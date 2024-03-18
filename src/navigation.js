@@ -15,7 +15,7 @@ export const headerData = {
         },
         {
           text: 'EON™️ Energy Harvesters',
-          href: getPermalink('/products/centum#harvesters'),
+          href: getPermalink('/products/eon'),
         },
         {
           text: 'CENTUM®️ TEC Solutions',
@@ -28,11 +28,11 @@ export const headerData = {
       links: [
         {
           text: 'What are Thermoelectrics?',
-          href: getPermalink('/#features'),
+          href: getPermalink('/technology'),
         },
         {
           text: 'Thin-Film TEC Devices',
-          href: getPermalink('/services'),
+          href: getPermalink('/technology#thin-film'),
         },
       ],
     },
@@ -41,35 +41,31 @@ export const headerData = {
       links: [
         {
           text: 'Optolectronics',
-          href: getPermalink('/landing/lead-generation'),
+          href: getPermalink('/applications/optoelectronics'),
         },
         {
-          text: 'Data Centers',
-          href: getPermalink('/landing/sales'),
+          text: 'EV Battery Management System',
+          href: getPermalink('/applications/ev-battery'),
         },
         {
-          text: 'Medical',
-          href: getPermalink('/landing/click-through'),
+          text: 'LiDAR',
+          href: getPermalink('/applications/lidar'),
         },
         {
-          text: 'Refrigeration / HVAC',
-          href: getPermalink('/landing/product'),
+          text: 'PCR Thermal Cyclers',
+          href: getPermalink('/applications/pcr'),
         },
         {
-          text: 'Telecom',
-          href: getPermalink('/landing/pre-launch'),
+          text: 'Medical Refrigerators',
+          href: getPermalink('/applications/refrigerators'),
         },
         {
-          text: 'Scientific',
-          href: getPermalink('/landing/subscription'),
+          text: 'Vaccine Cooler',
+          href: getPermalink('/applications/vaccine-cooler'),
         },
         {
-          text: 'Industrial / Automotive',
-          href: getPermalink('/landing/subscription'),
-        },
-        {
-          text: 'Internet of Things',
-          href: getPermalink('/landing/subscription'),
+          text: 'Imaging Sensor',
+          href: getPermalink('/applications/imaging-sensor'),
         },
       ],
     },
@@ -118,23 +114,46 @@ export const footerData = {
       ],
     },
     {
-      title: 'Platform',
+      title: 'Technology',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
-      ],
-    },
-    {
-      title: 'Support',
-      links: [
-        { text: 'Docs', href: '#' },
+        { text: 'Technology', href: '#' },
         { text: 'Community Forum', href: '#' },
         { text: 'Professional Services', href: '#' },
         { text: 'Skills', href: '#' },
         { text: 'Status', href: '#' },
+      ],
+    },
+    {
+      title: 'Markets & Applications',
+      links: [
+        {
+          text: 'Optolectronics',
+          href: getPermalink('/applications/optoelectronics'),
+        },
+        {
+          text: 'EV Battery Management System',
+          href: getPermalink('/applications/ev-battery'),
+        },
+        {
+          text: 'LiDAR',
+          href: getPermalink('/applications/lidar'),
+        },
+        {
+          text: 'PCR Thermal Cyclers',
+          href: getPermalink('/applications/pcr'),
+        },
+        {
+          text: 'Medical Refrigerators',
+          href: getPermalink('/applications/refrigerators'),
+        },
+        {
+          text: 'Vaccine Cooler',
+          href: getPermalink('/applications/vaccine-cooler'),
+        },
+        {
+          text: 'Imaging Sensor',
+          href: getPermalink('/applications/imaging-sensor'),
+        },
       ],
     },
     {
