@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/PageLayout.astro';
+
+import Hero3 from '../components/widgets/Hero3.astro';
+import Features2 from '../components/widgets/Features2.astro';
+import Content from '../components/widgets/Content.astro';
+import Stats from '../components/widgets/Stats.astro';
+
+const metadata = {
+  title: 'Sheetak — Markets and Applications',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero3 Widget ******************* -->
+
+  <Hero3 image={{ src: '~/assets/images/EON_Harvester_header-2.jpg', alt: 'EON Harverster' }}>
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white highlight"> Thermoelectric Coolers</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        The future of tomorrow’s green cooling solutions
+        <span class="font-semibold"> </span>
+      </span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>
+    </Fragment>
+  </Hero3>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="content"
+    isReversed
+    title="What are thermoelectric devices?"
+    subtitle="Convert electrical voltage into temperature difference (cooler) and vice-versa (generator)"
+    image={{
+      src: '~/assets/images/924-FIT-Harvester.png',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">
+      TE devices had been around since the 1800s, but recent innovations in nanotechnology & microfabrication have
+      enabled smaller, cheaper and more efficient modules.
+      <br /><br />
+      Sheetak is pioneering this revolution with its breakthrough proprietary technology across bulk cooling and thin film
+      devices.
+      <br /><br />
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features Widget *************** -->
+
+  <Features2
+    id="features"
+    title="Sheetak’s next-gen bulk cooling technology"
+    subtitle="Proprietary breakthroughs offered through CENTUM®️ product line"
+    columns={4}
+    items={[
+      {
+        title: 'Nanostructured Meta-lattices',
+        description:
+          'Nanostructure based thin film configuration with novel materials for breakthrough efficiencies',
+      },
+      {
+        title: 'Wafer Scale Integration',
+        description: 'Silicon substrates for unprecedented integration and miniature cooling and energy harvesting',
+      },
+      {
+        title: 'Diffusion barriers',
+        description:
+          'Novel barrier to prevent metal diffusion even at high temperatures',
+      },
+      {
+        title: 'No solders and sealants',
+        description: 'Elimination of solder and sealants for high reliability',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="What’s in it for you?"
+    stats={[
+      { title: 'THigh efficiency ', amount: 'ZT ~1.5' },
+      { title: 'Improvement in couple density', amount: '5x' },
+      { title: 'Increase in MTBF', amount: '5x' },
+      { title: ' Reduction in manufacturing costs', amount: '>60%x' },
+    ]}
+  />
+
+  <!-- Features Widget *************** -->
+
+  <Features2
+    id="features"
+    title="Sheetak’s thin film technology"
+    subtitle="Patented next-gen QOOLCHIP™️ & EON™️ product line"
+    columns={4}
+    items={[
+      {
+        title: 'Centum®️ C3 Design',
+        description:
+          'Metallic links in place of intermediate ceramic layers in multistage chips to deliver industry leading temperature differentials',
+      },
+      {
+        title: 'Silver Sintering',
+        description: 'Silver sintering in place of solders for high-temperature operation',
+      },
+      {
+        title: 'Networked Design',
+        description:
+          'Patented networked design with multiple alternative pathways for flow of current to improve fault tolerance',
+      },
+      {
+        title: 'Compliant Layer',
+        description: 'Springboard based compliant layer being developed for improved mechanical strength',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="What’s in it for you?"
+    stats={[
+      { title: 'Temperature Differential', amount: '1.3x' },
+      { title: 'Operating Temperature', amount: '>2x' },
+      { title: 'Reliability', amount: '>5x' },
+      { title: ' Reduction in height', amount: '>2x' },
+    ]}
+    ><Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Stats>
+
+  
+</Layout>

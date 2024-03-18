@@ -1,6 +1,6 @@
 site:
   name: Sheetak
-  site: 'https://astrowind.vercel.app'
+  site: 'https://sheetak.com'
   base: '/'
   trailingSlash: false
 
@@ -23,8 +23,8 @@ metadata:
         height: 628
     type: website
   twitter:
-    handle: '@sheetak'
-    site: '@sheetak'
+    handle: '@SheetakInc'
+    site: '@SheetakInc'
     cardType: summary_large_image
 
 i18n:

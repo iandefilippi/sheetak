@@ -1,92 +1,84 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: 'Products',
       links: [
         {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
+          text: 'QOOLCHIP™️ Microcoolers',
+          href: getPermalink('/products/qoolchip'),
         },
         {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
+          text: 'CENTUM®️ Coolers',
+          href: getPermalink('/products/centum#coolers'),
         },
         {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
+          text: 'EON™️ Energy Harvesters',
+          href: getPermalink('/products/centum#harvesters'),
         },
         {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
+          text: 'CENTUM®️ TEC Solutions',
+          href: getPermalink('/products/centum#solutions'),
         },
       ],
     },
     {
-      text: 'Pages',
+      text: 'Technology',
       links: [
         {
-          text: 'Features (Anchor Link)',
+          text: 'What are Thermoelectrics?',
           href: getPermalink('/#features'),
         },
         {
-          text: 'Services',
+          text: 'Thin-Film TEC Devices',
           href: getPermalink('/services'),
-        },
-        {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
         },
       ],
     },
     {
-      text: 'Landing',
+      text: 'Markets & Applications',
       links: [
         {
-          text: 'Lead Generation',
+          text: 'Optolectronics',
           href: getPermalink('/landing/lead-generation'),
         },
         {
-          text: 'Long-form Sales',
+          text: 'Data Centers',
           href: getPermalink('/landing/sales'),
         },
         {
-          text: 'Click-Through',
+          text: 'Medical',
           href: getPermalink('/landing/click-through'),
         },
         {
-          text: 'Product Details (or Services)',
+          text: 'Refrigeration / HVAC',
           href: getPermalink('/landing/product'),
         },
         {
-          text: 'Coming Soon or Pre-Launch',
+          text: 'Telecom',
           href: getPermalink('/landing/pre-launch'),
         },
         {
-          text: 'Subscription',
+          text: 'Scientific',
+          href: getPermalink('/landing/subscription'),
+        },
+        {
+          text: 'Industrial / Automotive',
+          href: getPermalink('/landing/subscription'),
+        },
+        {
+          text: 'Internet of Things',
           href: getPermalink('/landing/subscription'),
         },
       ],
     },
     {
-      text: 'Blog',
+      text: 'Company',
+      href: getPermalink('/company'),
+    },
+    {
+      text: 'Newsroom',
       links: [
         {
           text: 'Blog List',
@@ -110,26 +102,19 @@ export const headerData = {
         },
       ],
     },
-    {
-      text: 'Widgets',
-      href: '#',
-    },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Contact Us', href: getPermalink('/contact') }],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Products',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'QOOLCHIP™️ Microcoolers', href: getPermalink('/products/qoolchip')},
+        { text: 'EON™️ Energy Harvesters', href: getPermalink('/products/centum#harvesters') },
+        { text: 'CENTUM®️ Coolers', href: getPermalink('/products/centum#coolers')},
+        { text: 'CENTUM®️ TEC Solutions', href: getPermalink('/products/centum#solutions') },
       ],
     },
     {
@@ -170,14 +155,10 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/sheetakInc', target: '_blank' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/sheetak', target: '_blank' },
   ],
   footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
+    © Copyright 2024 | Sheetak All Rights Reserved
   `,
 };

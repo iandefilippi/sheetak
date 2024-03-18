@@ -1,10 +1,16 @@
 ---
 import { SITE } from '~/utils/config';
 import Image from './common/Image.astro';
-import logo from '../assets/images/Sheetak_Logo-LITE.png';
+import logoLight from '../assets/images/Sheetak_Logo.png';
+import logoDark from '../assets/images/Sheetak_Logo-LITE.png';
 ---
 
 <span class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
-  <Image src={logo} alt={SITE?.name} class="h-8" />
+  <!-- <Image src={logo} alt={SITE?.name} class="h-8" /> -->
+
+  <!-- Light logo, hidden in dark mode -->
+  <Image src={logoLight} alt={SITE?.name} class="h-8 dark:hidden" />
+  <!-- Dark logo, shown in dark mode -->
+  <Image src={logoDark} alt={SITE?.name} class="h-8 hidden dark:block" />
   
 </span>

@@ -1,18 +1,15 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '../../layouts/PageLayout.astro';
 
-import Hero3 from '~/components/widgets/Hero3.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-
-import { getPermalink } from '../utils/permalinks';
+import Hero3 from '../../components/widgets/Hero3.astro';
+import Features from '../../components/widgets/Features.astro';
+import Features2 from '../../components/widgets/Features2.astro';
+import Steps from '../../components/widgets/Steps.astro';
+import Content from '../../components/widgets/Content.astro';
+import BlogLatestPosts from '../../components/widgets/BlogLatestPosts.astro';
+import FAQs from '../../components/widgets/FAQs.astro';
+import Stats from '../../components/widgets/Stats.astro';
+import CallToAction from '../../components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Sheetak — Advanced Thermolectrics',
@@ -23,73 +20,236 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero3 Widget ******************* -->
 
-  <Hero3
-    image={{ src: '~/assets/images/EON_Harvester_header-2.jpg', alt: 'EON Harverster' }}
-    tagline="INTRODUCING THE INDUSTRY'S FIRST TRUE THIN FILM THERMOELECTRIC DEVICES"
-    actions={[{ text: 'Learn more', href: getPermalink('/products/qoolchip'), variant: "primary" }]}
-  >
+  <Hero3 image={{ src: '~/assets/images/EON_Harvester_header-2.jpg', alt: 'EON Harverster' }}>
     <Fragment slot="title">
-      <span class="text-accent dark:text-white highlight"> QOOLCHIP™️ MICROCOOLERS</span> &
-      <span class="text-accent dark:text-white highlight"> EON™️ ENERGY HARVESTERS</span>
+      <span class="text-accent dark:text-white highlight"> CENTUM®️ </span>
+      ADVANCED SOLID-STATE COOLERS AND ENERGY HARVESTERS
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Superior Cooling, Best Efficiency, Unparalleled Couples Density to Transform Thermal Management
+        Unrivaled Performance, Robust Mechanical Integrity, Patented Device Structures
         <span class="font-semibold"> </span>
       </span>
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">Advanced Thermolectrics</span>
     </Fragment>
   </Hero3>
 
-  <!-- Note Widget ******************* -->
+  <!-- Content Widget **************** -->
 
-  <Note />
+  <Content id="content" isReversed tagline="Inside template" title="CENTUM®️">
+    <Fragment slot="subtitle">
+      Sheetak's CENTUM®️ product line offers a patented multi-stage thermolectric device architecture with industry best
+      metrics in ΔT, Cooling Power (Qc) and COP in compact and low-profile chip packages
+    </Fragment>
 
+    <Fragment slot="content">
+      <p>
+        Sheetak’s CENTUM®️ leverages a cutting edge, patented t®️hermoelectric architecture with advanced materials and
+        assembly to ensure best-in-class, highly optimized performance - the answer to all your cooling needs.
+      </p><br />
+      <p>
+        Sheetak offers single and multi-stage CENTUM chips that offer the highest temperature differentials, cooling
+        power and low-profile form factors. The product line includes multiple variants with . customization options for
+        performance and reliability enhancement.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Cooling Power', amount: '2.1x' },
+      { title: 'Temperature Differential', amount: '1.1x' },
+      { title: 'Operating Temperature', amount: '200°C' },
+      { title: 'Reliability', amount: '>5x' },
+      { title: 'Smaller', amount: '>2x' },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Stats>
+
+  <Features2
+    id="applications"
+    title="Applications"
+    columns={2}
+    items={[
+      {
+        title: 'PCR Cyclers',
+        description: 'Faster ramp rate with unbeatable reliability',
+      },
+      {
+        title: 'Optoelectronics',
+        description: 'Higher cooling power with smaller size',
+      },
+      {
+        title: 'EV Battery management',
+        description: 'Precise control & unbeatable reliability',
+      },
+      {
+        title: 'Laser Cooling',
+        description: 'Faster heat removal for precise temp control',
+      },
+      {
+        title: 'Medical refrigerators',
+        description: 'Precise temperature control with wide range',
+      },
+    ]}
+  />
+
+  <Content
+    id="coolers"
+    title="CENTUM®️ C3 Coolers"
+    subtitle="Best-In-Class Thermoelectric Coolers"
+    items={[
+      {
+        description: 'Substrate: Ceramic (ALN), Ceramic (ALO), Metal',
+      },
+      {
+        description: 'Finish: Sealing/Lapping, Substrate Metallization, Lead Attachment',
+      },
+      {
+        description: 'Design Form Factors, System Integration, System Optimization',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      CENTUM®️ C3 delivers industry-leading temperature difference and cooling density, leveraging patented multi-stage
+      architecture and compact form factors.
+      <br /><br />
+      CENTUM®️ C3 Coolers can be customized in a variety of ways.
+    </Fragment>
+  </Content>
+
+  <Content
+    id="coolers"
+    isReversed
+    items={[
+      {
+        description: '2-Stage desing with 21 to 238 couples per stage',
+      },
+      {
+        description: 'Geometry: 10x10x2.8 mm (21x21 couples) to 40x40x3.7 mm (238x238 couples)',
+      },
+      {
+        description: 'ΔTmax: 97°C (at Th = 27°C) to 110°C (at Th=50°C)',
+      },
+      {
+        description: 'Qmax: 3.0W (21x21 couples) to 42W (238x238 couples)',
+      },
+      {
+        description: 'Customized designs include 4-Stage form factor and bespoke geometries',
+      },
+    ]}
+  >
+    <Fragment slot="content"> CENTUM®️ C3 Sample Specifications Range: </Fragment>
+  </Content>
+
+  <Content
+    id="harvesters"
+    title="CENTUM®️ Energy Harvesters"
+    items={[
+      {
+        description:
+          'Capturing excess energy from furnaces, chemical plants, refineries, and other industrial equipment',
+      },
+      {
+        description: 'Battery-less IoT in Healthcare, Energy/Utilities, Transportation, Logistics, and Infrastructure',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      CENTUM®️ Energy Harvesters generate power from waste heat recovery ranging from milliwatts to kilowatts of usable
+      energy. These offer industry-leading performance and efficiency to power green solutions that can power smart,
+      grid-independent autonomous systems.
+      <br /><br />
+      CENTUM®️ Energy Harvesters can be customized for a broad variety of industrial applications:
+    </Fragment>
+  </Content>
+
+  <Content id="harvesters">
+    <Fragment slot="content">
+      Sheetak offers the same substrate, finish, and design options for CENTUM®️ Energy Harvesters as are available for
+      CENTUM®️ Energy C3 Coolers.
+    </Fragment>
+  </Content>
 
   <!-- Features Widget *************** -->
+
+  <Features2
+    id="features"
+    tagline="Features"
+    title="What you get with QOOLCHIP™️"
+    subtitle="The next generation thermoelectric chip."
+    items={[
+      {
+        title: 'Features',
+        description:
+          '<li> Built on a unique hermetically sealed technology platform allowing for use in non hermetic packaging </li> <li> Incorporates industry best highest efficiency materials to provide exceptional cooling capability on top of reliable mechanical integrity </li> <li> Utilizes structures in tandem with robuts fault tolerant topology for unparallel reliability</li>',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Applications',
+        description: '<li>Optolectronics</li><li>Telecommunications</li><li>Data Communications</li><li>LiDAR</li>',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Industries',
+        description:
+          '<li>5G Communications</li><li>Data Center</li><li>LiDAR/3D Sensing</li><li>CCD, IR, Seonsors</li><li>Medical Diagnostics/PCR</li>',
+        icon: 'tabler:list-check',
+      },
+    ]}
+  />
 
   <Features
     id="features"
     tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    title="Features"
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        //title: 'Features',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+          'Built on a unique hermetically sealed technology platform allowing for use in non hermetic packaging ',
         icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Ready-to-use Components',
+        //title: 'Applications',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+          'Incorporates industry best highest efficiency materials to provide exceptional cooling capability on top of reliable mechanical integrity',
         icon: 'tabler:components',
       },
       {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+        //title: 'Industries',
+        description: 'Utilizes structures in tandem with robuts fault tolerant topology for unparallel reliability',
         icon: 'tabler:list-check',
       },
+    ]}
+  />
+
+  <Content
+    id="features"
+    tagline="Features"
+    title="Features"
+    items={[
       {
-        title: 'Excellent Page Speed',
+        //title: 'Features',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
+          'Built on a unique hermetically sealed technology platform allowing for use in non hermetic packaging ',
+        icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        //title: 'Applications',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
+          'Incorporates industry best highest efficiency materials to provide exceptional cooling capability on top of reliable mechanical integrity',
+        icon: 'tabler:components',
       },
       {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+        //title: 'Industries',
+        description: 'Utilizes structures in tandem with robuts fault tolerant topology for unparallel reliability',
+        icon: 'tabler:list-check',
       },
     ]}
   />
@@ -353,17 +513,6 @@ const metadata = {
         description:
           "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
       },
-    ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
     ]}
   />
 

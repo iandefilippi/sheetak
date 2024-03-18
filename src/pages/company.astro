@@ -1,0 +1,92 @@
+---
+import Hero3 from '../components/widgets/Hero3.astro';
+import HeroText from '../components/widgets/HeroText.astro';
+import Steps from '../components/widgets/Steps.astro';
+import Layout from '../layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero3
+    image={{
+      src: '~/assets/images/360-bridge.jpg',
+      alt: 'Austin',
+    }}
+  >
+    <Fragment slot="title"> SHEETAK </Fragment>
+
+    <Fragment slot="subtitle"> Taking Cooling, Heating, and Energy Harvesting to the Next Level. </Fragment>
+  </Hero3>
+
+  <!-- Content Widget ************** -->
+
+  <HeroText title="About Us" columns={3} isBeforeContent={true}>
+    <Fragment slot="content">
+      <p>
+        We push the boundaries of cooling technology, so you can push the boundaries of our modern world. Located in the
+        growing tech hub of Austin, Texas, Sheetak develops sustainable, ecofriendly solid-state cooling, heating and
+        energy harvesting technologies with breakthrough efficiencies.
+      </p>
+      <p>
+        We have over 100+ years of knowledge and application of solid-state cooling, thermoelectric devices and
+        structures, and thermal management.
+      </p>
+      <p>Our formidable IP portfolio includes over 25 granted patents in Thermoelectric and related technologies.</p>
+      <p>
+        In addition, the company’s expertise extends to optimal material compositions, fabrication methods, quantum
+        thermoelectric device designs, circuit designs, architecture, and volume manufacturing.
+      </p>
+      <p>
+        Our state-of-the-art facilities in Austin, Texas can fabricate advanced thermoelectric modules – from
+        conventional bulk-technology devices to [soon] thin-film coolers and energy harvesters. We can also do assembly
+        of chips and engines, and TEC integration in systems of all types.
+      </p>
+    </Fragment>
+  </HeroText>
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps
+    title="Leadership Team"
+    isReversed={false}
+    items={[
+      {
+        title: 'Uttam Ghoshal',
+        subtitle: 'Founder, President & CTO',
+        description: 'Uttam Ghoshal is an entrepreneur pioneering the commercialization of electronic refrigeration. He was a Master Inventor at IBM Research, the Founder of Nanocoolers Inc., VP at Cypress Semiconductor/Sunpower, and an Adjunct Professor at UT Austin. He has managed $30M+ US DOE & DOD funded programs, holds 150+ patents, and received his Ph.D. (EE) from UC Berkeley.',
+      },
+      {
+        title: 'Tejas Vakil',
+        subtitle: 'CEO',
+        description:
+          'Technology Executive with 40+ years of experience in General Management, Business Development, Sales and Marketing at global companies such as Dell Inc., Compaq (now HP), Bertelsmann (arvato). Serial Entrepreneur with six technology startups, early-stage companies with successful exits; SAAS FinTech, Blockchain, RFID. Global Experience – EMEA Vice President, Dell; managed teams in Europe, Middle East, Asia, and Latin America. Investor and Advisory/Board member for various real estate, energy, technology, venture capital and private equity investment firms.',
+      },
+      {
+        title: 'Chris Munson',
+        subtitle: 'CFO',
+        description:
+          'Chris Munson has been CEO or CFO of numerous companies, from startups to businesses doing $50 million in revenue. He started his first company at age 21 after graduating from the University of Texas. Chris was named Austin Young Entrepreneur of the year in 1989.',
+      },
+      {
+        title: 'Key Kolle',
+        subtitle: 'Director of Operations',
+        description:
+          'Key Kolle has 25+ years of experience in silicon process technologies at Cirrus Logic, Silicon Labs, and Vitesse Semiconductor.',
+      },
+      {
+        title: 'Mike Koelzer',
+        subtitle: 'Director of Manufacturing',
+        description:
+          'Mike has 30+ years of experience in subcontract manufacturing bringing products from prototype to high volume. His experience covers a wide range of products from commercial/Industrial to Military and space level.',
+      },
+    ]}
+  />
+
+
+  
+</Layout>

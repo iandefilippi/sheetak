@@ -1,18 +1,15 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '../../layouts/PageLayout.astro';
 
-import Hero3 from '~/components/widgets/Hero3.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-
-import { getPermalink } from '../utils/permalinks';
+import Hero3 from '../../components/widgets/Hero3.astro';
+import Features from '../../components/widgets/Features.astro';
+import Features2 from '../../components/widgets/Features2.astro';
+import Steps from '../../components/widgets/Steps.astro';
+import Content from '../../components/widgets/Content.astro';
+import BlogLatestPosts from '../../components/widgets/BlogLatestPosts.astro';
+import FAQs from '../../components/widgets/FAQs.astro';
+import Stats from '../../components/widgets/Stats.astro';
+import CallToAction from '../../components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Sheetak — Advanced Thermolectrics',
@@ -23,73 +20,156 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero3 Widget ******************* -->
 
-  <Hero3
-    image={{ src: '~/assets/images/EON_Harvester_header-2.jpg', alt: 'EON Harverster' }}
-    tagline="INTRODUCING THE INDUSTRY'S FIRST TRUE THIN FILM THERMOELECTRIC DEVICES"
-    actions={[{ text: 'Learn more', href: getPermalink('/products/qoolchip'), variant: "primary" }]}
-  >
+  <Hero3 image={{ src: '~/assets/images/EON_Harvester_header-2.jpg', alt: 'EON Harverster' }}>
     <Fragment slot="title">
-      <span class="text-accent dark:text-white highlight"> QOOLCHIP™️ MICROCOOLERS</span> &
-      <span class="text-accent dark:text-white highlight"> EON™️ ENERGY HARVESTERS</span>
+      <span class="text-accent dark:text-white highlight"> QOOLCHIP™️</span>
+      ADVANCED SOLID-STATE COOLERS
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Superior Cooling, Best Efficiency, Unparalleled Couples Density to Transform Thermal Management
+        Microcoolers, Macro Performance
         <span class="font-semibold"> </span>
       </span>
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">Advanced Thermolectrics</span>
     </Fragment>
   </Hero3>
 
-  <!-- Note Widget ******************* -->
+  <!-- Content Widget **************** -->
 
-  <Note />
+  <Content
+    id="content"
+    isReversed
+    title="QOOLCHIP™️"
+    image={{
+      src: '~/assets/images/924-FIT-Harvester.png',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">
+      <p>
+        Sheetak's QOOLCHIP™️ product line offers microcoolers with unrivaled high efficiency, cooling performance with
+        couple densities higher than 1000 couples/cm2 and device as thin as 0.5mm.
+      </p><br />
+      <p>
+        These devices are hermetically sealed and designed for precision temperature control applications including
+        optoelectronics components in Telecom, Datacom, and LiDAR applications.
+      </p>
+    </Fragment>
 
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Expected values"
+    stats={[
+      { title: 'Efficiency', amount: '1.5ZT' },
+      { title: 'Thickness', amount: '0.5mm' },
+      { title: 'couples/cm²', amount: '>1000' },
+    ]}
+  />
+
+  <Features2
+    id="applications"
+    title="Applications"
+    columns={2}
+    items={[
+      {
+        title: 'Household refrigerators',
+        description: 'Better cooling while saving energy',
+      },
+      {
+        title: 'Optoelectronics',
+        description: 'Higher cooling power with smaller size',
+      },
+      {
+        title: 'Data center cooling',
+        description: 'Unbeatable reliability',
+      },
+      {
+        title: 'Aerospace & Defense',
+        description: 'Precise temperature control with wide range',
+      },
+    ]}
+  />
 
   <!-- Features Widget *************** -->
+
+  <Features2
+    id="features"
+    tagline="Features"
+    title="What you get with QOOLCHIP™️"
+    subtitle="The next generation thermoelectric chip."
+    items={[
+      {
+        title: 'Features',
+        description:
+          '<li> Built on a unique hermetically sealed technology platform allowing for use in non hermetic packaging </li> <li> Incorporates industry best highest efficiency materials to provide exceptional cooling capability on top of reliable mechanical integrity </li> <li> Utilizes structures in tandem with robuts fault tolerant topology for unparallel reliability</li>',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Applications',
+        description: '<li>Optolectronics</li><li>Telecommunications</li><li>Data Communications</li><li>LiDAR</li>',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Industries',
+        description:
+          '<li>5G Communications</li><li>Data Center</li><li>LiDAR/3D Sensing</li><li>CCD, IR, Seonsors</li><li>Medical Diagnostics/PCR</li>',
+        icon: 'tabler:list-check',
+      },
+    ]}
+  />
 
   <Features
     id="features"
     tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    title="Features"
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        //title: 'Features',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+          'Built on a unique hermetically sealed technology platform allowing for use in non hermetic packaging ',
         icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Ready-to-use Components',
+        //title: 'Applications',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+          'Incorporates industry best highest efficiency materials to provide exceptional cooling capability on top of reliable mechanical integrity',
         icon: 'tabler:components',
       },
       {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+        //title: 'Industries',
+        description: 'Utilizes structures in tandem with robuts fault tolerant topology for unparallel reliability',
         icon: 'tabler:list-check',
       },
+    ]}
+  />
+
+  <Content
+    id="features"
+    tagline="Features"
+    title="Features"
+    items={[
       {
-        title: 'Excellent Page Speed',
+        //title: 'Features',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
+          'Built on a unique hermetically sealed technology platform allowing for use in non hermetic packaging ',
+        icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        //title: 'Applications',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
+          'Incorporates industry best highest efficiency materials to provide exceptional cooling capability on top of reliable mechanical integrity',
+        icon: 'tabler:components',
       },
       {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+        //title: 'Industries',
+        description: 'Utilizes structures in tandem with robuts fault tolerant topology for unparallel reliability',
+        icon: 'tabler:list-check',
       },
     ]}
   />
@@ -353,17 +433,6 @@ const metadata = {
         description:
           "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
       },
-    ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
     ]}
   />
 

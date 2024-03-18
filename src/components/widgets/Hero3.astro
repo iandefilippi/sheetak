@@ -1,6 +1,6 @@
 ---
 import Image from '~/components/common/Image.astro';
-// import Button from '~/components/ui/Button.astro';
+import Button from '~/components/ui/Button.astro';
 import type { CallToAction } from '~/types';
 
 //const thumbnail = '../../assets/images/slider-0.jpg';
@@ -22,6 +22,7 @@ const {
   subtitle = await Astro.slots.render('subtitle'),
   tagline,
   content = await Astro.slots.render('content'),
+  actions = await Astro.slots.render('actions'),
   image = await Astro.slots.render('image'),
   isReversed = false,
 } = Astro.props;
@@ -56,7 +57,23 @@ const {
       {tagline && <p class="text-base font-bold tracking-wide uppercase sm:text-lg" set:html={tagline} />}
       {title && <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight sm:leading-tighter tracking-tighter mb-4" set:html={title} />}
       {subtitle && <p class="text-sm sm:text-xl mb-6" set:html={subtitle} />}
+      
       <!-- Actions could be placed here as well -->
+      {
+        actions && (
+          <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+            {Array.isArray(actions) ? (
+              actions.map((action) => (
+                <div class="flex w-full sm:w-auto">
+                  <Button {...(action || {})} class="w-full sm:mb-0" />
+                </div>
+              ))
+            ) : (
+              <Fragment set:html={actions} />
+            )}
+          </div>
+        )
+      }
     </div>
   </div>
 

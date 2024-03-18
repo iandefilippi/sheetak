@@ -129,6 +129,7 @@ export interface Stat {
 
 export interface Item {
   title?: string;
+  subtitle?: string;
   description?: string;
   icon?: string;
   classes?: Record<string, string>;

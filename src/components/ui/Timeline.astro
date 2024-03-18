@@ -15,6 +15,7 @@ const {
   container: containerClass = "",
   panel: panelClass = "",
   title: titleClass = "",
+  subtitle: subtitleClass = "",
   description: descriptionClass = "",
   icon: defaultIconClass = "text-primary dark:text-slate-200 border-primary dark:border-blue-700",
 } = classes;
@@ -25,7 +26,7 @@ const {
     <div class={containerClass}>
       {items.map(
         (
-          { title, description, icon, classes: itemClasses = {} },
+          { title, subtitle, description, icon, classes: itemClasses = {} },
           index = 0
         ) => (
           <div class={twMerge("flex", panelClass, itemClasses?.panel)}>
@@ -61,6 +62,16 @@ const {
                     itemClasses?.title
                   )}
                   set:html={title}
+                />
+              )}
+              {subtitle && (
+                <p
+                  class={twMerge(
+                    "text-l font-bold",
+                    subtitleClass,
+                    itemClasses?.title
+                  )}
+                  set:html={subtitle}
                 />
               )}
               {description && (
